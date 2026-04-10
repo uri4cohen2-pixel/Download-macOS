@@ -46,8 +46,7 @@ jobs:
       # Download Installer
       - name: Download macOS Installer
         run: |
-          softwareupdate --fetch-full-installer --full-installer-version ${{ env.installer_version }}
-
+    
       # Generate Installer
       - if: github.event.inputs.file == 'dmg'
         name: Generate macOS DMG Installer
